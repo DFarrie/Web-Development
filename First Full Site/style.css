@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 150px repeat(5, minmax(100px, auto)) 150px;
+  grid-row-gap: 5px;
+  background: #F5F5F5;
+}
+
+.navBar {
+  /*Parent Grid Style*/
+  grid-column: 1 / 7;
+  grid-row: 1;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
+  background: #F5F5F5;
+  /*border-bottom: thick solid purple;*/
+}
+
+.navBar #navItem1 {
+  grid-column: 3 / span 1;
+  background: #9E9E9E;
+  width: 100px;
+  height: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
+.navBar #navItem2 {
+  grid-column: 4 / span 1;
+  background: #9E9E9E;
+  width: 100px;
+  height: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
+.navBar #navItem3 {
+  grid-column: 6 / span 1;
+  background: #9E9E9E;
+  width: 100px;
+  height: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
+.navBar #navItem4 {
+  grid-column: 7 / span 1;
+  background: #9E9E9E;
+  width: 100px;
+  height: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
+.navBar #navHome {
+  grid-column: 5 / span 1;
+  align-self: center;
+  justify-self: center;
+  width: 100px;
+  height: 100px;
+  background: #9575CD;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.welcomeWrapper {
+  /*Parent Grid Style*/
+  grid-column: 1 / -1;
+  grid-row: 2;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  /*General Style*/
+  background: #B39DDB;
+}
+
+.welcome {
+  /*Parent Grid Style*/
+  grid-column: 2;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(80px, 3fr) 2fr auto auto auto minmax(80px, 3fr);
+  grid-row-gap: 10px;
+  /*General Style*/
+  background: #B39DDB;
+}
+
+.welcome .topBar {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 2;
+  /*General Style*/
+  background: #673AB7;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 2px;
+}
+
+.welcome .middleLine1 {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 3;
+  /*General Style*/
+  background: #7E57C2;
+  height: 15px;
+}
+
+.welcome .middleLine2 {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 4;
+  /*General Style*/
+  background: #7E57C2;
+  height: 15px;
+}
+
+.welcome .welcomeButton {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 5;
+  /*General Style*/
+  background: #4A148C;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 20px;
+  height: 30px;
+}
+
+.clientNeeds {
+  /*Parent Grid Style*/
+  grid-column: 1 / 7;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: minmax(50px, 100px) repeat(3, 1fr) minmax(50px, 100px);
+  grid-column-gap: 20px;
+  align-items: start;
+  /*General Style*/
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.clientNeeds #example1 {
+  /*Parent Grid Style*/
+  grid-column: 2;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 75px auto;
+  /*General Style*/
+  background: #BDBDBD;
+  border-radius: 2px;
+}
+
+.clientNeeds #example1 #E1Header {
+  /*Parent Grid Style*/
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  /*Sub-Grid Style*/
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  /*General Style*/
+  background: #B39DDB;
+}
+
+.clientNeeds #example1 #E1Header>i {
+  font-size: 35px;
+  color: #673AB7;
+}
+
+.clientNeeds #example1 #E1Body {
+  /*Parent Grid Style*/
+  grid-column: 1 / span 6;
+  grid-row: 2;
+  /*Sub-Grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  grid-template-areas: "Title Title Title Title . ." "Body1 Body1 Body1 Body1 Body1 Body1" "Body2 Body2 Body2 Body2 Body2 Body2" "Body3 Body3 Body3 . . .";
+  /*General Style*/
+  margin: 10px;
+}
+
+.clientNeeds #example1 #E1Body #E1BTitle {
+  /*Parent Grid Style*/
+  grid-area: Title;
+  /*General Style*/
+  background: #757575;
+  min-height: 20px;
+}
+
+.clientNeeds #example1 #E1Body #E1BP1 {
+  /*Parent Grid Style*/
+  grid-area: Body1;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example1 #E1Body #E1BP2 {
+  /*Parent Grid Style*/
+  grid-area: Body2;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example1 #E1Body #E1BP3 {
+  /*Parent Grid Style*/
+  grid-area: Body3;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example2 {
+  /*Parent Grid Style*/
+  grid-column: 3;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 75px auto;
+  /*General Style*/
+  background: #BDBDBD;
+  border-radius: 2px;
+}
+
+.clientNeeds #example2 #E2Header {
+  /*Parent Grid Style*/
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  /*Sub-Grid Style*/
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  /*General Style*/
+  background: #B39DDB;
+}
+
+.clientNeeds #example2 #E2Header>i {
+  font-size: 35px;
+  color: #673AB7;
+}
+
+.clientNeeds #example2 #E2Body {
+  /*Parent Grid Style*/
+  grid-column: 1 / span 6;
+  grid-row: 2;
+  /*Sub-Grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  grid-template-areas: "Title Title Title Title Title ." "Body1 Body1 Body1 Body1 Body1 Body1" "Body2 Body2 Body2 Body2 Body2 Body2" "Body3 Body3 Body3 Body3 Body3 Body3" "Body4 Body4 . . . .";
+  /*General Style*/
+  margin: 10px;
+}
+
+.clientNeeds #example2 #E2Body #E2BTitle {
+  /*Parent Grid Style*/
+  grid-area: Title;
+  /*General Style*/
+  background: #757575;
+  min-height: 20px;
+}
+
+.clientNeeds #example2 #E2Body #E2BP1 {
+  /*Parent Grid Style*/
+  grid-area: Body1;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example2 #E2Body #E2BP2 {
+  /*Parent Grid Style*/
+  grid-area: Body2;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example2 #E2Body #E2BP3 {
+  /*Parent Grid Style*/
+  grid-area: Body3;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example2 #E2Body #E2BP4 {
+  /*Parent Grid Style*/
+  grid-area: Body4;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example3 {
+  /*Parent Grid Style*/
+  grid-column: 4;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 75px auto;
+  /*General Style*/
+  background: #BDBDBD;
+  border-radius: 2px;
+}
+
+.clientNeeds #example3 #E3Header {
+  /*Parent Grid Style*/
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  /*Sub-Grid Style*/
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  /*General Style*/
+  background: #B39DDB;
+}
+
+.clientNeeds #example3 #E3Header>i {
+  font-size: 35px;
+  color: #673AB7;
+}
+
+.clientNeeds #example3 #E3Body {
+  /*Parent Grid Style*/
+  grid-column: 1 / span 6;
+  grid-row: 2;
+  /*Sub-Grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  grid-template-areas: "Title Title Title . . ." "Body1 Body1 Body1 Body1 Body1 Body1" "Body2 Body2 Body2 Body2 Body2 Body2" "Body3 Body3 Body3 Body3 Body3 .";
+  /*General Style*/
+  margin: 10px;
+}
+
+.clientNeeds #example3 #E3Body #E3BTitle {
+  /*Parent Grid Style*/
+  grid-area: Title;
+  /*General Style*/
+  background: #757575;
+  min-height: 20px;
+}
+
+.clientNeeds #example3 #E3Body #E3BP1 {
+  /*Parent Grid Style*/
+  grid-area: Body1;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example3 #E3Body #E3BP2 {
+  /*Parent Grid Style*/
+  grid-area: Body2;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.clientNeeds #example3 #E3Body #E3BP3 {
+  /*Parent Grid Style*/
+  grid-area: Body3;
+  /*General Style*/
+  background: #E0E0E0;
+  min-height: 20px;
+}
+
+.missionWrapper {
+  /*Parent Grid Style*/
+  grid-column: 1 / -1;
+  grid-row: 4;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  /*General Style*/
+  background: #F5F5F5;
+}
+
+.mission {
+  /*Parent Grid Style*/
+  grid-column: 2;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(80px, 3fr) 2fr auto auto auto minmax(80px, 3fr);
+  grid-row-gap: 10px;
+  /*General Style*/
+  background: #B39DDB;
+}
+
+.mission .topBar {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 2;
+  /*General Style*/
+  background: #673AB7;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 2px;
+}
+
+.mission .middleLine1 {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 3;
+  /*General Style*/
+  background: #7E57C2;
+  height: 15px;
+}
+
+.mission .middleLine2 {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 4;
+  /*General Style*/
+  background: #7E57C2;
+  height: 15px;
+}
+
+.mission .welcomeButton {
+  /*Parent Grid Style*/
+  grid-column: 3 / span 2;
+  grid-row: 5;
+  /*General Style*/
+  background: #4A148C;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 20px;
+  height: 30px;
+}
+
+.feedback {
+  background: #A5D6A7;
+  grid-column: 1 / 7;
+}
+
+.bio {
+  background: #A5D6A7;
+  grid-column: 1 / 7;
+}
+
+.contact {
+  background: #A5D6A7;
+  grid-column: 1 / 7;
+}
