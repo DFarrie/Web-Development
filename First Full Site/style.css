@@ -10,7 +10,7 @@ body {
   grid-template-rows: 150px repeat(5, minmax(100px, auto)) 150px;
   grid-row-gap: 5px;
   /*General Style*/
-  background: #F5F5F5;
+  background: #FFF;
 }
 
 .navBar {
@@ -21,7 +21,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
   /*General Style*/
-  background: #F5F5F5;
+  background: #FFF;
 }
 
 .navBar #navItem1 {
@@ -32,7 +32,7 @@ body {
   /*General Style*/
   background: #9E9E9E;
   width: 100px;
-  height: 20px;
+  height: 15px;
 }
 
 .navBar #navItem2 {
@@ -43,7 +43,7 @@ body {
   /*General Style*/
   background: #9E9E9E;
   width: 100px;
-  height: 20px;
+  height: 15px;
 }
 
 .navBar #navItem3 {
@@ -54,7 +54,7 @@ body {
   /*General Style*/
   background: #9E9E9E;
   width: 100px;
-  height: 20px;
+  height: 15px;
 }
 
 .navBar #navItem4 {
@@ -65,7 +65,7 @@ body {
   /*General Style*/
   background: #9E9E9E;
   width: 100px;
-  height: 20px;
+  height: 15px;
 }
 
 .navBar #navHome {
@@ -209,7 +209,7 @@ body {
   grid-area: Title;
   /*General Style*/
   background: #757575;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example1 #E1Body #E1BP1 {
@@ -217,7 +217,7 @@ body {
   grid-area: Body1;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example1 #E1Body #E1BP2 {
@@ -225,7 +225,7 @@ body {
   grid-area: Body2;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example1 #E1Body #E1BP3 {
@@ -233,7 +233,7 @@ body {
   grid-area: Body3;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example2 {
@@ -283,7 +283,7 @@ body {
   grid-area: Title;
   /*General Style*/
   background: #757575;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example2 #E2Body #E2BP1 {
@@ -291,7 +291,7 @@ body {
   grid-area: Body1;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example2 #E2Body #E2BP2 {
@@ -299,7 +299,7 @@ body {
   grid-area: Body2;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example2 #E2Body #E2BP3 {
@@ -307,7 +307,7 @@ body {
   grid-area: Body3;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example2 #E2Body #E2BP4 {
@@ -315,7 +315,7 @@ body {
   grid-area: Body4;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example3 {
@@ -365,7 +365,7 @@ body {
   grid-area: Title;
   /*General Style*/
   background: #757575;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example3 #E3Body #E3BP1 {
@@ -373,7 +373,7 @@ body {
   grid-area: Body1;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example3 #E3Body #E3BP2 {
@@ -381,7 +381,7 @@ body {
   grid-area: Body2;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .clientNeeds #example3 #E3Body #E3BP3 {
@@ -389,7 +389,7 @@ body {
   grid-area: Body3;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 20px;
+  min-height: 15px;
 }
 
 .missionWrapper {
@@ -400,7 +400,7 @@ body {
   display: grid;
   grid-template-columns: 100px auto 100px;
   /*General Style*/
-  background: #F5F5F5;
+  background: #FFF;
 }
 
 .mission {
@@ -473,51 +473,52 @@ body {
   /*Sub-grid Style*/
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: 111px repeat(3, 1fr) 25px 1fr 50px repeat(3, 1.5fr);
+  grid-row-gap: 10px;
   /*General Style*/
-  background: #A5D6A7;
 }
 
 .feedbackWrapper .feedback #topBigLine {
   grid-column: 3 / 11;
   grid-row: 2;
-  background: #BDBDBD;
+  background: #E0E0E0;
 }
 
 .feedbackWrapper .feedback #midBigLine {
   grid-column: 2 / 12;
   grid-row: 3;
-  background: #F5F5F5;
+  background: #E0E0E0;
 }
 
 .feedbackWrapper .feedback #botBigLine {
   grid-column: 3 / 11;
   grid-row: 4;
-  background: #F5F5F5;
+  background: #E0E0E0;
 }
 
 .feedbackWrapper .feedback #tinyLine {
   grid-column: 6 / 9;
   grid-row: 6;
-  background: #F5F5F5;
+  background: #E0E0E0;
+  height: 15px;
 }
 
 .feedbackWrapper .feedback #circleWrapper {
   grid-column: 7;
-  grid-row: 8;
+  grid-row: 9;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 grid-column-gap: 1px;
   grid-auto-flow: column;
-  background: #F5F5F5;
+  background: #FFF;
   justify-items: center;
   align-items: center;
 }
 
 .feedbackWrapper .feedback #circleWrapper #firstCircle{
   background: #BDBDBD;
-  width: 10px;
-	height: 10px;
+  width: 8px;
+	height: 8px;
   	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -526,8 +527,8 @@ grid-column-gap: 1px;
 
 .feedbackWrapper .feedback #circleWrapper #secondCircle{
   background: #757575;
-  width: 13px;
-	height: 13px;
+  width: 11px;
+	height: 11px;
   	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -536,8 +537,8 @@ grid-column-gap: 1px;
 
 .feedbackWrapper .feedback #circleWrapper #thirdCircle{
   background: #BDBDBD;
-  width: 10px;
-	height: 10px;
+  width: 8px;
+	height: 8px;
   	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -546,8 +547,8 @@ grid-column-gap: 1px;
 
 .feedbackWrapper .feedback #circleWrapper #fourthCircle{
   background: #BDBDBD;
-  width: 10px;
-	height: 10px;
+  width: 8px;
+	height: 8px;
   	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -556,10 +557,10 @@ grid-column-gap: 1px;
 
 .bio {
   background: #A5D6A7;
-  grid-column: 1 / 7;
+  grid-column: 1 / -1;
 }
 
 .contact {
   background: #A5D6A7;
-  grid-column: 1 / 7;
+  grid-column: 1 / -1;
 }
