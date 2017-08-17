@@ -200,6 +200,12 @@ body {
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 20px;
   grid-template-areas: "Title Title Title Title . ." "Body1 Body1 Body1 Body1 Body1 Body1" "Body2 Body2 Body2 Body2 Body2 Body2" "Body3 Body3 Body3 . . .";
+  /*grid-template:
+  "Title Title Title Title . ." 500px
+  "Body1 Body1 Body1 Body1 Body1 Body1" Auto
+  "Body2 Body2 Body2 Body2 Body2 Body2" Auto
+  "Body3 Body3 Body3 . . ." Auto
+  / repeat(6, 1fr);*/
   /*General Style*/
   margin: 10px;
 }
@@ -556,11 +562,61 @@ grid-column-gap: 1px;
 }
 
 .bio {
-  background: #A5D6A7;
+
   grid-column: 1 / -1;
+    background: #A5D6A7;
 }
 
 .contact {
-  background: #A5D6A7;
+    /*Parent Grid Style*/
   grid-column: 1 / -1;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr 2fr 7fr 2fr 1fr;
+/*General Style*/
+    background: #757575;
+}
+
+.phone{
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-rows: 25px auto 25px;
+  grid-template-columns: 1fr 1fr minmax(50px, auto) 1fr;
+  align-content: center;
+  justify-content: center;
+
+  background: #A5D6A7;
+}
+
+.phoneButton{
+  grid-column: 2;
+grid-row: 2;
+
+display: inherit;
+
+
+  background: #4A148C;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 20px;
+  height: 30px;
+}
+
+.phoneInfo{
+grid-row: 2;
+grid-column: 3;
+
+  background: #512DA8;
+}
+
+.socialMedia{
+      /*Parent Grid Style*/
+      grid-column: 4;
+      grid-row: 2;
+
+      /*General Style*/
+      background: white;
 }
