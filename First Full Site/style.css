@@ -577,8 +577,8 @@ body {
   grid-column: 1 / -1;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: 1fr 2fr 7fr 2fr 1fr;
+  grid-template-rows: repeat(5, auto); /*Temp styling*/
+  grid-template-columns: 1fr 2fr 7fr auto 1fr;
   /*General Style*/
   background: #757575;
 }
@@ -617,10 +617,96 @@ body {
   background: #512DA8;
 }
 
+.generalInfo{
+  /*Parent Grid Style*/
+  grid-column: 2;
+  grid-row: 3;
+
+/*Sub-grid Style*/
+display: grid;
+grid-template-rows: repeat(8, 25px);/*Temp styling*/
+grid-template-columns: repeat(6, 25px);/*Temp styling*/
+grid-template-areas:
+"Line1 Line1 Line1 Line1 Line1 Line1"
+"Line2 Line2 Line2 Line2 Line2 Line2"
+"Line3 Line3 Line3 Line3 Line3 Line3"
+"Line4 Line4 Line4 Line4 Line4 ."
+". . . . . ."
+"Line5 Line5 . . . ."
+"Line6 Line6 . . . ."
+"Line7 Line7 . . . .";
+  /*General Style*/
+  height: 50px;
+  background: green;
+}
+
+.generalInfo .generalInfoLine{
+
+  /*General Style*/
+  height: 15px;
+  background: #512DA8;
+}
+
+.generalInfo .generalInfoLine #Line1{
+    /*Parent Grid Style*/
+    grid-area: Line1;
+}
+
+.generalInfo .generalInfoLine #Line2{
+    /*Parent Grid Style*/
+
+}
+
+.generalInfo .generalInfoLine #Line3{
+    /*Parent Grid Style*/
+
+}
+
+.generalInfo .generalInfoLine #Line4{
+    /*Parent Grid Style*/
+
+}
+
+.generalInfo .generalInfoLine #Line5{
+    /*Parent Grid Style*/
+
+}
+
+.generalInfo .generalInfoLine #Line6{
+    /*Parent Grid Style*/
+
+}
+
+.generalInfo .generalInfoLine #Line7{
+    /*Parent Grid Style*/
+
+}
+
+
+
+
 .socialMedia {
   /*Parent Grid Style*/
   grid-column: 4;
-  grid-row: 2;
+  grid-row: 3;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5em;
+  justify-items: center;
+  align-items: center;
+  align-content: start;
   /*General Style*/
-  background: white;
+  padding: 0 10px;
+}
+
+.socialMediaCircle {
+  /*General Style*/
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background: #D84315;
 }
