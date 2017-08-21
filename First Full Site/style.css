@@ -560,9 +560,94 @@ body {
   -webkit-border-radius: 50%;
 }
 
-.bio {
+.bioWrapper {
+  /*Parent Grid Style*/
   grid-column: 1 / -1;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: 3rem auto;
+  grid-template-columns: 10rem 2fr 10rem;
+  /*General Style*/
   background: #B39DDB;
+}
+
+.bioWrapper .bio {
+  /*Parent Grid Style*/
+  grid-row: 2;
+  grid-column: 2;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.bioWrapper .bio #BioPicture {
+  /*Sub-grid Style*/
+  display: grid;
+  justify-content: center;
+  /*General Style*/
+  margin-top: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+
+.bioWrapper .bio #BioPicture i {
+  /*General Style*/
+  font-size: 35rem;
+  color: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription {
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "Header Header Header Header Header ." "P1 P1 P1 P1 P1 P1" "P2 P2 P2 P2 P2 P2" "P3 P3 P3 P3 P3 P3" "CallToAction CallToAction . . . .";
+  grid-row-gap: 1rem;
+  align-content: center;
+  /*General Style*/
+}
+
+.bioWrapper .bio #BioDescription #Header {
+  /*Parent Grid Style*/
+  grid-area: Header;
+  /*General Style*/
+  height: 3.2rem;
+  background: #673AB7;
+}
+
+.bioWrapper .bio #BioDescription #P1 {
+  /*Parent Grid Style*/
+  grid-area: P1;
+  /*General Style*/
+  height: 1.6rem;
+  background: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription #P2 {
+  /*Parent Grid Style*/
+  grid-area: P2;
+  /*General Style*/
+  height: 1.6rem;
+  background: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription #P3 {
+  /*Parent Grid Style*/
+  grid-area: P3;
+  /*General Style*/
+  height: 1.6rem;
+  background: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription #CallToAction {
+  /*Parent Grid Style*/
+  grid-area: CallToAction;
+  /*General Style*/
+  height: 2rem;
+  border-radius: 2rem;
+  margin-right: 3rem;
+  background: #D84315;
 }
 
 .contact {
@@ -619,16 +704,8 @@ body {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-  "Line1 Line1 Line1 Line1 Line1 Line1"
-  "Line2 Line2 Line2 Line2 Line2 Line2"
-  "Line3 Line3 Line3 Line3 Line3 Line3"
-  "Line4 Line4 Line4 Line4 Line4 ."
-  ". . . . . ."
-  "Line5 Line5 . . . ."
-  "Line6 Line6 . . . ."
-  "Line7 Line7 . . . .";
-grid-row-gap: 0.4rem;
+  grid-template-areas: "Line1 Line1 Line1 Line1 Line1 Line1" "Line2 Line2 Line2 Line2 Line2 Line2" "Line3 Line3 Line3 Line3 Line3 Line3" "Line4 Line4 Line4 Line4 Line4 ." ". . . . . ." "Line5 Line5 . . . ." "Line6 Line6 . . . ." "Line7 Line7 . . . .";
+  grid-row-gap: 0.4rem;
 }
 
 .generalInfoLine {
@@ -644,32 +721,32 @@ grid-row-gap: 0.4rem;
 
 .generalInfo #Line2 {
   /*Parent Grid Style*/
-    grid-area: Line2;
+  grid-area: Line2;
 }
 
 .generalInfo #Line3 {
   /*Parent Grid Style*/
-    grid-area: Line3;
+  grid-area: Line3;
 }
 
 .generalInfo #Line4 {
   /*Parent Grid Style*/
-    grid-area: Line4;
+  grid-area: Line4;
 }
 
 .generalInfo #Line5 {
   /*Parent Grid Style*/
-    grid-area: Line5;
+  grid-area: Line5;
 }
 
 .generalInfo #Line6 {
   /*Parent Grid Style*/
-    grid-area: Line6;
+  grid-area: Line6;
 }
 
 .generalInfo #Line7 {
   /*Parent Grid Style*/
-    grid-area: Line7;
+  grid-area: Line7;
 }
 
 .socialMedia {
