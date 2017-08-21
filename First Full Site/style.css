@@ -1,12 +1,18 @@
 * {
+  /*Reset Styling*/
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /*Used for rem sizing*/
 }
 
 body {
   /*Boss Grid Style*/
   display: grid;
-  grid-template-rows: 150px repeat(5, minmax(100px, auto)) 150px;
+  grid-template-rows: 15rem repeat(5, minmax(10rem, auto)) 15rem;
   grid-template-columns: repeat(6, 1fr);
   /*General Style*/
   background: #FFF;
@@ -19,7 +25,9 @@ body {
   /*Sub-grid Style*/
   display: grid;
   grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
-  grid-column-gap: 15px;
+  grid-column-gap: 1.6rem;
+  justify-items: center;
+  align-items: center;
   /*General Style*/
   background: #FFF;
 }
@@ -27,53 +35,47 @@ body {
 .navBar #navItem1 {
   /*Parent Grid Style*/
   grid-column: 3;
-  align-self: center;
   /*General Style*/
-  width: 100px;
-  height: 15px;
+  width: 10rem;
+  height: 1.6rem;
   background: #9E9E9E;
 }
 
 .navBar #navItem2 {
   /*Parent Grid Style*/
   grid-column: 4;
-  align-self: center;
   /*General Style*/
-  width: 100px;
-  height: 15px;
+  width: 10rem;
+  height: 1.6rem;
   background: #9E9E9E;
 }
 
 .navBar #navItem3 {
   /*Parent Grid Style*/
   grid-column: 6;
-  align-self: center;
   /*General Style*/
-  width: 100px;
-  height: 15px;
+  width: 10rem;
+  height: 1.6rem;
   background: #9E9E9E;
 }
 
 .navBar #navItem4 {
   /*Parent Grid Style*/
   grid-column: 7;
-  align-self: center;
   /*General Style*/
-  width: 100px;
-  height: 15px;
+  width: 10rem;
+  height: 1.6rem;
   background: #9E9E9E;
 }
 
 .navBar #navHome {
   /*Parent Grid Style*/
   grid-column: 5;
-  align-self: center;
-  justify-self: center;
   /*General Style*/
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  -moz-border-radius: 100px;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  -moz-border-radius: 10rem;
   -webkit-border-radius: 50%;
   background: #9575CD;
 }
@@ -84,7 +86,7 @@ body {
   grid-row: 2;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-columns: 100px auto 100px;
+  grid-template-columns: 10rem auto 10rem;
   /*General Style*/
   background: #B39DDB;
 }
@@ -94,9 +96,9 @@ body {
   grid-column: 2;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-rows: minmax(80px, 3fr) 2fr auto auto auto minmax(80px, 3fr);
+  grid-template-rows: minmax(8rem, 3fr) 2fr auto auto auto minmax(8rem, 3fr);
   grid-template-columns: repeat(6, 1fr);
-  grid-row-gap: 10px;
+  grid-row-gap: 1rem;
   /*General Style*/
   background: #B39DDB;
 }
@@ -106,11 +108,8 @@ body {
   grid-row: 2;
   grid-column: 3 / span 2;
   /*General Style*/
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  margin-right: 50px;
-  border-radius: 2px;
+  margin: 1rem 5rem;
+  border-radius: 0.2rem;
   background: #673AB7;
 }
 
@@ -119,7 +118,7 @@ body {
   grid-row: 3;
   grid-column: 3 / span 2;
   /*General Style*/
-  height: 15px;
+  height: 1.6rem;
   background: #7E57C2;
 }
 
@@ -128,7 +127,7 @@ body {
   grid-row: 4;
   grid-column: 3 / span 2;
   /*General Style*/
-  height: 15px;
+  height: 1.6rem;
   background: #7E57C2;
 }
 
@@ -137,37 +136,42 @@ body {
   grid-row: 5;
   grid-column: 3 / span 2;
   /*General Style*/
-  margin-top: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
-  border-radius: 20px;
-  height: 30px;
+  margin: 1rem 4rem 0 4rem;
+  border-radius: 2rem;
+  height: 3rem;
   background: #D84315;
 }
 
 .clientNeeds {
   /*Parent Grid Style*/
-  grid-column: 1 / 7;
+  grid-column: 1 / -1;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-columns: minmax(50px, 100px) repeat(3, 1fr) minmax(50px, 100px);
-  grid-column-gap: 20px;
-  align-items: start;
+  grid-template-columns: minmax(5rem, 10rem) 1fr minmax(5rem, 10rem);
   /*General Style*/
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 5rem 0;
 }
 
-.clientNeeds #example1 {
+.clientNeeds .clientNeedsWrapper {
   /*Parent Grid Style*/
   grid-column: 2;
   /*Sub-grid Style*/
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5rem;
+  align-items: start;
+}
+
+.clientNeeds #example1 {
+  /*Parent Grid Style*/
+  grid-column: 1;
+  /*Sub-grid Style*/
+  display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 75px auto;
+  grid-template-rows: 7.5rem auto;
   /*General Style*/
   background: #BDBDBD;
-  border-radius: 2px;
+  border-radius: 0.2rem;
 }
 
 .clientNeeds #example1 #E1Header {
@@ -183,7 +187,7 @@ body {
 }
 
 .clientNeeds #example1 #E1Header>i {
-  font-size: 35px;
+  font-size: 3.5rem;
   color: #673AB7;
 }
 
@@ -194,16 +198,10 @@ body {
   /*Sub-Grid Style*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  grid-gap: 2rem;
   grid-template-areas: "Title Title Title Title . ." "Body1 Body1 Body1 Body1 Body1 Body1" "Body2 Body2 Body2 Body2 Body2 Body2" "Body3 Body3 Body3 . . .";
-  /*grid-template:
-  "Title Title Title Title . ." 500px
-  "Body1 Body1 Body1 Body1 Body1 Body1" Auto
-  "Body2 Body2 Body2 Body2 Body2 Body2" Auto
-  "Body3 Body3 Body3 . . ." Auto
-  / repeat(6, 1fr);*/
   /*General Style*/
-  margin: 10px;
+  margin: 1rem;
 }
 
 .clientNeeds #example1 #E1Body #E1BTitle {
@@ -211,7 +209,7 @@ body {
   grid-area: Title;
   /*General Style*/
   background: #757575;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example1 #E1Body #E1BP1 {
@@ -219,7 +217,7 @@ body {
   grid-area: Body1;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example1 #E1Body #E1BP2 {
@@ -227,7 +225,7 @@ body {
   grid-area: Body2;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example1 #E1Body #E1BP3 {
@@ -235,19 +233,19 @@ body {
   grid-area: Body3;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example2 {
   /*Parent Grid Style*/
-  grid-column: 3;
+  grid-column: 2;
   /*Sub-grid Style*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 75px auto;
+  grid-template-rows: 7.5rem auto;
   /*General Style*/
   background: #BDBDBD;
-  border-radius: 2px;
+  border-radius: 0.2rem;
 }
 
 .clientNeeds #example2 #E2Header {
@@ -263,7 +261,7 @@ body {
 }
 
 .clientNeeds #example2 #E2Header>i {
-  font-size: 35px;
+  font-size: 3.5rem;
   color: #673AB7;
 }
 
@@ -274,10 +272,10 @@ body {
   /*Sub-Grid Style*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  grid-gap: 2rem;
   grid-template-areas: "Title Title Title Title Title ." "Body1 Body1 Body1 Body1 Body1 Body1" "Body2 Body2 Body2 Body2 Body2 Body2" "Body3 Body3 Body3 Body3 Body3 Body3" "Body4 Body4 . . . .";
   /*General Style*/
-  margin: 10px;
+  margin: 1rem;
 }
 
 .clientNeeds #example2 #E2Body #E2BTitle {
@@ -285,7 +283,7 @@ body {
   grid-area: Title;
   /*General Style*/
   background: #757575;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example2 #E2Body #E2BP1 {
@@ -293,7 +291,7 @@ body {
   grid-area: Body1;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example2 #E2Body #E2BP2 {
@@ -301,7 +299,7 @@ body {
   grid-area: Body2;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example2 #E2Body #E2BP3 {
@@ -309,7 +307,7 @@ body {
   grid-area: Body3;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example2 #E2Body #E2BP4 {
@@ -317,19 +315,19 @@ body {
   grid-area: Body4;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example3 {
   /*Parent Grid Style*/
-  grid-column: 4;
+  grid-column: 3;
   /*Sub-grid Style*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 75px auto;
+  grid-template-rows: 7.5rem auto;
   /*General Style*/
   background: #BDBDBD;
-  border-radius: 2px;
+  border-radius: 0.2rem;
 }
 
 .clientNeeds #example3 #E3Header {
@@ -345,7 +343,7 @@ body {
 }
 
 .clientNeeds #example3 #E3Header>i {
-  font-size: 35px;
+  font-size: 3.5rem;
   color: #673AB7;
 }
 
@@ -356,10 +354,10 @@ body {
   /*Sub-Grid Style*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  grid-gap: 2rem;
   grid-template-areas: "Title Title Title . . ." "Body1 Body1 Body1 Body1 Body1 Body1" "Body2 Body2 Body2 Body2 Body2 Body2" "Body3 Body3 Body3 Body3 Body3 .";
   /*General Style*/
-  margin: 10px;
+  margin: 1rem;
 }
 
 .clientNeeds #example3 #E3Body #E3BTitle {
@@ -367,7 +365,7 @@ body {
   grid-area: Title;
   /*General Style*/
   background: #757575;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example3 #E3Body #E3BP1 {
@@ -375,7 +373,7 @@ body {
   grid-area: Body1;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example3 #E3Body #E3BP2 {
@@ -383,7 +381,7 @@ body {
   grid-area: Body2;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .clientNeeds #example3 #E3Body #E3BP3 {
@@ -391,7 +389,7 @@ body {
   grid-area: Body3;
   /*General Style*/
   background: #E0E0E0;
-  min-height: 15px;
+  min-height: 1.6rem;
 }
 
 .missionWrapper {
@@ -400,7 +398,7 @@ body {
   grid-row: 4;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-columns: 100px auto 100px;
+  grid-template-columns: 10rem auto 10rem;
   /*General Style*/
   background: #FFF;
 }
@@ -411,8 +409,8 @@ body {
   /*Sub-grid Style*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: minmax(80px, 3fr) 2fr auto auto auto minmax(80px, 3fr);
-  grid-row-gap: 10px;
+  grid-template-rows: minmax(8rem, 3fr) 2fr auto auto auto minmax(8rem, 3fr);
+  grid-row-gap: 1rem;
   /*General Style*/
   background: #B39DDB;
 }
@@ -422,12 +420,9 @@ body {
   grid-column: 3 / span 2;
   grid-row: 2;
   /*General Style*/
+  margin: 1rem 5rem;
+  border-radius: 0.2rem;
   background: #673AB7;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  margin-right: 50px;
-  border-radius: 2px;
 }
 
 .mission .middleLine1 {
@@ -436,7 +431,7 @@ body {
   grid-row: 3;
   /*General Style*/
   background: #7E57C2;
-  height: 15px;
+  height: 1.6rem;
 }
 
 .mission .middleLine2 {
@@ -445,7 +440,7 @@ body {
   grid-row: 4;
   /*General Style*/
   background: #7E57C2;
-  height: 15px;
+  height: 1.6rem;
 }
 
 .mission .welcomeButton {
@@ -453,12 +448,10 @@ body {
   grid-column: 3 / span 2;
   grid-row: 5;
   /*General Style*/
+  border-radius: 2rem;
+  height: 3rem;
+  margin: 1rem 4rem 0 4rem;
   background: #D84315;
-  margin-top: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
-  border-radius: 20px;
-  height: 30px;
 }
 
 .feedbackWrapper {
@@ -466,17 +459,17 @@ body {
   grid-column: 1 / -1;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-columns: 200px repeat(12, 1fr) 200px;
+  grid-template-columns: 20rem repeat(12, 1fr) 20rem;
 }
 
 .feedbackWrapper .feedback {
   /*Parent Grid Style*/
-  grid-column: 2 / 14;
+  grid-column: 2 / span 12;
   /*Sub-grid Style*/
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 111px repeat(3, 1fr) 25px 1fr 50px repeat(3, 1.5fr);
-  grid-row-gap: 10px;
+  grid-template-rows: 11.1rem repeat(3, 1fr) 2.5rem 1fr 5rem repeat(3, 1.5fr);
+  grid-row-gap: 1rem;
 }
 
 .feedbackWrapper .feedback #topBigLine {
@@ -509,7 +502,7 @@ body {
   grid-row: 6;
   /*General Style*/
   background: #E0E0E0;
-  height: 15px;
+  height: 1.6rem;
 }
 
 .feedbackWrapper .feedback #circleWrapper {
@@ -519,7 +512,7 @@ body {
   /*Sub-grid Style*/
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1px;
+  grid-column-gap: 0.1rem;
   grid-auto-flow: column;
   justify-items: center;
   align-items: center;
@@ -530,8 +523,8 @@ body {
 .feedbackWrapper .feedback #circleWrapper #firstCircle {
   /*General Style*/
   background: #BDBDBD;
-  width: 8px;
-  height: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -540,8 +533,8 @@ body {
 .feedbackWrapper .feedback #circleWrapper #secondCircle {
   /*General Style*/
   background: #757575;
-  width: 11px;
-  height: 11px;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -550,8 +543,8 @@ body {
 .feedbackWrapper .feedback #circleWrapper #thirdCircle {
   /*General Style*/
   background: #BDBDBD;
-  width: 8px;
-  height: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -560,8 +553,8 @@ body {
 .feedbackWrapper .feedback #circleWrapper #fourthCircle {
   /*General Style*/
   background: #BDBDBD;
-  width: 8px;
-  height: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -588,7 +581,7 @@ body {
   grid-column: 1 / -1;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-rows: 15px auto 15px;
+  grid-template-rows: 1.6rem auto 1.6rem;
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
   /*General Style*/
@@ -600,10 +593,10 @@ body {
   grid-column: 2 / span 2;
   grid-row: 2;
   /*General Style*/
-  height: 30px;
-  border-radius: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
+  height: 3rem;
+  border-radius: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
   background: #D84315;
 }
 
@@ -612,7 +605,7 @@ body {
   grid-row: 2;
   grid-column: 4 / span 4;
   /*General Style*/
-  height: 15px;
+  height: 1.6rem;
   margin-right: 15%;
   background: #512DA8;
 }
