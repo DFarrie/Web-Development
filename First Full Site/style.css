@@ -12,7 +12,7 @@ html {
 body {
   /*Boss Grid Style*/
   display: grid;
-  grid-template-rows: 15rem repeat(5, minmax(10rem, auto)) 15rem;
+  grid-template-rows: repeat(7, auto);
   grid-template-columns: repeat(6, 1fr);
   /*General Style*/
   background: #FFF;
@@ -29,6 +29,7 @@ body {
   justify-items: center;
   align-items: center;
   /*General Style*/
+  margin: 5rem 0 3rem 0;
   background: #FFF;
 }
 
@@ -38,7 +39,7 @@ body {
   /*General Style*/
   width: 10rem;
   height: 1.6rem;
-  background: #9E9E9E;
+  background: #E0E0E0;
 }
 
 .navBar #navItem2 {
@@ -47,7 +48,7 @@ body {
   /*General Style*/
   width: 10rem;
   height: 1.6rem;
-  background: #9E9E9E;
+  background: #E0E0E0;
 }
 
 .navBar #navItem3 {
@@ -56,7 +57,7 @@ body {
   /*General Style*/
   width: 10rem;
   height: 1.6rem;
-  background: #9E9E9E;
+  background: #E0E0E0;
 }
 
 .navBar #navItem4 {
@@ -65,7 +66,7 @@ body {
   /*General Style*/
   width: 10rem;
   height: 1.6rem;
-  background: #9E9E9E;
+  background: #E0E0E0;
 }
 
 .navBar #navHome {
@@ -77,7 +78,7 @@ body {
   border-radius: 10rem;
   -moz-border-radius: 10rem;
   -webkit-border-radius: 50%;
-  background: #9575CD;
+  background: #B39DDB;
 }
 
 .welcomeWrapper {
@@ -108,9 +109,10 @@ body {
   grid-row: 2;
   grid-column: 3 / span 2;
   /*General Style*/
-  margin: 1rem 5rem;
+  margin: 1rem 0;
   border-radius: 0.2rem;
   background: #673AB7;
+  opacity: 0.7;
 }
 
 .welcome .middleLine1 {
@@ -119,7 +121,9 @@ body {
   grid-column: 3 / span 2;
   /*General Style*/
   height: 1.6rem;
+  margin: 0 -5rem;
   background: #7E57C2;
+  opacity: 0.4;
 }
 
 .welcome .middleLine2 {
@@ -128,7 +132,9 @@ body {
   grid-column: 3 / span 2;
   /*General Style*/
   height: 1.6rem;
+  margin: 0 -5rem;
   background: #7E57C2;
+  opacity: 0.4;
 }
 
 .welcome .welcomeButton {
@@ -136,10 +142,10 @@ body {
   grid-row: 5;
   grid-column: 3 / span 2;
   /*General Style*/
-  margin: 1rem 4rem 0 4rem;
+  margin: 1rem 6rem 0 6rem;
   border-radius: 2rem;
   height: 3rem;
-  background: #D84315;
+  background: #F9A825;
 }
 
 .clientNeeds {
@@ -467,14 +473,14 @@ body {
   grid-column: 2 / span 12;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   grid-template-rows: 11.1rem repeat(3, 1fr) 2.5rem 1fr 5rem repeat(3, 1.5fr);
   grid-row-gap: 1rem;
 }
 
 .feedbackWrapper .feedback #topBigLine {
   /*Parent Grid Style*/
-  grid-column: 3 / 11;
+  grid-column: 3 / span 9;
   grid-row: 2;
   /*General Style*/
   background: #E0E0E0;
@@ -482,7 +488,7 @@ body {
 
 .feedbackWrapper .feedback #midBigLine {
   /*Parent Grid Style*/
-  grid-column: 2 / 12;
+  grid-column: 2 / span 11;
   grid-row: 3;
   /*General Style*/
   background: #E0E0E0;
@@ -490,7 +496,7 @@ body {
 
 .feedbackWrapper .feedback #botBigLine {
   /*Parent Grid Style*/
-  grid-column: 3 / 11;
+  grid-column: 3 / span 9;
   grid-row: 4;
   /*General Style*/
   background: #E0E0E0;
@@ -560,9 +566,94 @@ body {
   -webkit-border-radius: 50%;
 }
 
-.bio {
+.bioWrapper {
+  /*Parent Grid Style*/
   grid-column: 1 / -1;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: 3rem auto;
+  grid-template-columns: 10rem 2fr 10rem;
+  /*General Style*/
   background: #B39DDB;
+}
+
+.bioWrapper .bio {
+  /*Parent Grid Style*/
+  grid-row: 2;
+  grid-column: 2;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.bioWrapper .bio #BioPicture {
+  /*Sub-grid Style*/
+  display: grid;
+  justify-content: center;
+  /*General Style*/
+  margin-top: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+
+.bioWrapper .bio #BioPicture i {
+  /*General Style*/
+  font-size: 35rem;
+  color: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription {
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "Header Header Header Header Header ." "P1 P1 P1 P1 P1 P1" "P2 P2 P2 P2 P2 P2" "P3 P3 P3 P3 P3 P3" "CallToAction CallToAction . . . .";
+  grid-row-gap: 1rem;
+  align-content: center;
+  /*General Style*/
+}
+
+.bioWrapper .bio #BioDescription #Header {
+  /*Parent Grid Style*/
+  grid-area: Header;
+  /*General Style*/
+  height: 3.2rem;
+  background: #673AB7;
+}
+
+.bioWrapper .bio #BioDescription #P1 {
+  /*Parent Grid Style*/
+  grid-area: P1;
+  /*General Style*/
+  height: 1.6rem;
+  background: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription #P2 {
+  /*Parent Grid Style*/
+  grid-area: P2;
+  /*General Style*/
+  height: 1.6rem;
+  background: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription #P3 {
+  /*Parent Grid Style*/
+  grid-area: P3;
+  /*General Style*/
+  height: 1.6rem;
+  background: #7E57C2;
+}
+
+.bioWrapper .bio #BioDescription #CallToAction {
+  /*Parent Grid Style*/
+  grid-area: CallToAction;
+  /*General Style*/
+  height: 2rem;
+  border-radius: 2rem;
+  margin-right: 3rem;
+  background: #D84315;
 }
 
 .contact {
@@ -570,7 +661,8 @@ body {
   grid-column: 1 / -1;
   /*Sub-grid Style*/
   display: grid;
-  grid-template-rows: repeat(5, auto); /*Temp styling*/
+  grid-template-rows: auto 2rem auto 4rem;
+  /*Temp styling*/
   grid-template-columns: 1fr 2fr 7fr auto 1fr;
   /*General Style*/
   background: #757575;
@@ -610,73 +702,58 @@ body {
   background: #512DA8;
 }
 
-.generalInfo{
+.generalInfo {
   /*Parent Grid Style*/
   grid-column: 2;
   grid-row: 3;
-
-/*Sub-grid Style*/
-display: grid;
-grid-template-rows: repeat(8, 25px);/*Temp styling*/
-grid-template-columns: repeat(6, 25px);/*Temp styling*/
-grid-template-areas:
-"Line1 Line1 Line1 Line1 Line1 Line1"
-"Line2 Line2 Line2 Line2 Line2 Line2"
-"Line3 Line3 Line3 Line3 Line3 Line3"
-"Line4 Line4 Line4 Line4 Line4 ."
-". . . . . ."
-"Line5 Line5 . . . ."
-"Line6 Line6 . . . ."
-"Line7 Line7 . . . .";
-  /*General Style*/
-  height: 50px;
-  background: green;
+  /*Sub-grid Style*/
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "Line1 Line1 Line1 Line1 Line1 Line1" "Line2 Line2 Line2 Line2 Line2 Line2" "Line3 Line3 Line3 Line3 Line3 Line3" "Line4 Line4 Line4 Line4 Line4 ." ". . . . . ." "Line5 Line5 . . . ." "Line6 Line6 . . . ." "Line7 Line7 . . . .";
+  grid-row-gap: 0.4rem;
 }
 
-.generalInfo .generalInfoLine{
-
+.generalInfoLine {
   /*General Style*/
-  height: 15px;
+  height: 0.4rem;
   background: #512DA8;
 }
 
-.generalInfo .generalInfoLine #Line1{
-    /*Parent Grid Style*/
-    grid-area: Line1;
+.generalInfo #Line1 {
+  /*Parent Grid Style*/
+  grid-area: Line1;
 }
 
-.generalInfo .generalInfoLine #Line2{
-    /*Parent Grid Style*/
-
+.generalInfo #Line2 {
+  /*Parent Grid Style*/
+  grid-area: Line2;
 }
 
-.generalInfo .generalInfoLine #Line3{
-    /*Parent Grid Style*/
-
+.generalInfo #Line3 {
+  /*Parent Grid Style*/
+  grid-area: Line3;
 }
 
-.generalInfo .generalInfoLine #Line4{
-    /*Parent Grid Style*/
-
+.generalInfo #Line4 {
+  /*Parent Grid Style*/
+  grid-area: Line4;
 }
 
-.generalInfo .generalInfoLine #Line5{
-    /*Parent Grid Style*/
-
+.generalInfo #Line5 {
+  /*Parent Grid Style*/
+  grid-area: Line5;
 }
 
-.generalInfo .generalInfoLine #Line6{
-    /*Parent Grid Style*/
-
+.generalInfo #Line6 {
+  /*Parent Grid Style*/
+  grid-area: Line6;
 }
 
-.generalInfo .generalInfoLine #Line7{
-    /*Parent Grid Style*/
-
+.generalInfo #Line7 {
+  /*Parent Grid Style*/
+  grid-area: Line7;
 }
-
-
-
 
 .socialMedia {
   /*Parent Grid Style*/
@@ -691,15 +768,106 @@ grid-template-areas:
   align-items: center;
   align-content: start;
   /*General Style*/
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .socialMediaCircle {
   /*General Style*/
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   background: #D84315;
 }
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+@media (max-width: 320px) {
+  html {
+    /*General Style*/
+    /*Used for rem sizing*/
+    font-size: 62.5%;
+  }
+
+  body {
+    /*Boss Grid Style*/
+    display: grid;
+      grid-template-rows: repeat(7, auto);
+    grid-template-columns: repeat(6, 1fr);
+    /*General Style*/
+    background: #FFF;
+  }
+
+  .navBar {
+    /*Parent Grid Style*/
+    grid-row: 1;
+    grid-column: 1 / -1;
+    /*Sub-grid Style*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
+    grid-column-gap: 1.6rem;
+    justify-items: center;
+    align-items: center;
+    /*General Style*/
+    margin: 5rem 0 3rem 0;
+    background: #FFF;
+  }
+
+  .navBar #navItem1 {
+    /*Parent Grid Style*/
+    grid-column: 3;
+    /*General Style*/
+    width: 10rem;
+    height: 1.6rem;
+    background: #E0E0E0;
+  }
+
+  .navBar #navItem2 {
+    /*Parent Grid Style*/
+    grid-column: 4;
+    /*General Style*/
+    width: 10rem;
+    height: 1.6rem;
+    background: #E0E0E0;
+  }
+
+  .navBar #navItem3 {
+    /*Parent Grid Style*/
+    grid-column: 6;
+    /*General Style*/
+    width: 10rem;
+    height: 1.6rem;
+    background: #E0E0E0;
+  }
+
+  .navBar #navItem4 {
+    /*Parent Grid Style*/
+    grid-column: 7;
+    /*General Style*/
+    width: 10rem;
+    height: 1.6rem;
+    background: #E0E0E0;
+  }
+
+  .navBar #navHome {
+    /*Parent Grid Style*/
+    grid-column: 5;
+    /*General Style*/
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -webkit-border-radius: 50%;
+    background: #B39DDB;
+  }
+
+
+
+
+
+  }

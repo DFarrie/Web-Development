@@ -1,0 +1,8 @@
+Background - #B39DDB (200)
+Nav Logo - #B39DDB (200)
+Header - #673AB7 (500, opacity 70%)
+Paragraph - #7E57C2 (500, opacity 40%)
+Text on White - #E0E0E0 (300)
+Button - 
+Footer - 
+Social Media Buttons - 
