@@ -1,0 +1,80 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #666;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Applies parallax effext*/
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url('../Parallax Website/images/image1.jpeg');
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url('../Parallax Website/images/image2.jpeg');
+  min-height: 40rem;
+}
+
+.pimg3 {
+  background-image: url('../Parallax Website/images/image3.jpeg');
+  min-height: 40rem;
+}
+
+.section {
+  text-align: center;
+  padding: 5rem 8rem;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext{
+  position: absolute;
+  top:50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 2.7rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+}
+
+.ptext .border{
+  background-color: #111;
+  color:#fff;
+  padding:2rem;
+}
+
+.ptext .border.trans{
+  background-color: transparent;
+}
+
+@media(max-width:56.8rem){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment: scroll;
+  }
+}
