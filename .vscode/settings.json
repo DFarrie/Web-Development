@@ -7,4 +7,5 @@
             "**/*.scss",
             "**/*.sass"
     ],
+    "files.insertFinalNewline": true
 }
