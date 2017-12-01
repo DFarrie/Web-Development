@@ -197,6 +197,7 @@ body {
 	background-attachment: fixed, fixed, fixed;
 }
 
+
 /* body:after {
 	content: '';
 	display: block;
@@ -211,11 +212,17 @@ body {
 	/* background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
 	background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
 	background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)); */
-	/* background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(123, 31, 162, 0.5) 5%, rgba(255, 255, 255, 0.3)), url("../../images/island.jpeg");
+
+
+/* background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(123, 31, 162, 0.5) 5%, rgba(255, 255, 255, 0.3)), url("../../images/island.jpeg");
 	background-repeat: repeat, no-repeat, no-repeat;
 	background-size: 10rem 10rem, cover, cover; */
-	/* background-position: top left, center center; */
-	/* -moz-transition: opacity 1.75s ease-out;
+
+
+/* background-position: top left, center center; */
+
+
+/* -moz-transition: opacity 1.75s ease-out;
 	-webkit-transition: opacity 1.75s ease-out;
 	-ms-transition: opacity 1.75s ease-out;
 	transition: opacity 1.75s ease-out;
@@ -234,10 +241,10 @@ select,
 textarea {
 	color: #414f57;
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
-	font-size: 14pt;
+	font-size: 1.6rem;
 	font-weight: 300;
 	line-height: 2;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 }
 
@@ -246,7 +253,7 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 11pt;
+		font-size: 1.6rem;
 	}
 }
 
@@ -255,7 +262,7 @@ textarea {
 	input,
 	select,
 	textarea {
-		font-size: 10pt;
+		font-size: 1.4rem;
 		line-height: 1.75;
 	}
 }
@@ -292,6 +299,7 @@ i {
 
 p {
 	margin: 0 0 1.5em 0;
+	text-transform: none;
 }
 
 h1,
@@ -316,9 +324,9 @@ h6 a {
 }
 
 h1 {
-	font-size: 1.85em;
-	letter-spacing: 0.22em;
-	margin: 0 0 0.525em 0;
+	font-size: 3rem;
+	letter-spacing: 0.50rem;
+	margin: 2.4rem 0 1rem 0;
 }
 
 h2 {
@@ -856,8 +864,8 @@ button:disabled,
 	display: block;
 	margin: 0 auto;
 	border-radius: 100%;
-	box-shadow: 0 0 0 1.5em #ffffff;
-	max-width: 122px;
+	box-shadow: 0 0 0 1.5rem #fff;
+	max-width: 13rem;
 }
 
 #main .avatar:before {
@@ -865,9 +873,9 @@ button:disabled,
 	display: block;
 	position: absolute;
 	top: 50%;
-	left: -3em;
-	width: calc(100% + 6em);
-	height: 1px;
+	left: -4.8rem;
+	width: calc(100% + 9.6rem);
+	height: 0.1rem;
 	z-index: -1;
 	background: #c8cccf;
 }
