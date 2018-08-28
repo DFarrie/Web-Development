@@ -8,5 +8,6 @@
             "**/*.sass"
     ],
     "files.insertFinalNewline": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false
 }
